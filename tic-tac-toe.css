@@ -1,0 +1,127 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #5757f0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #e3d1d1;
+}
+
+h3 {
+    margin-bottom: 15px;
+    color: #101212;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    background: #101010;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #08ef23;
+}
+
+.radio-group label {
+    cursor: pointer;
+}
+
+#status {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    background-color: #1f1c1c;
+    border: 2px solid #f1f4f7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.cell:hover {
+    background-color: #161616;
+}
+
+.cell:active {
+    transform: scale(0.95);
+}
+
+.cell.x { color: #910707; }
+.cell.o { color: #f5f2f2; }
+
+/* Buttons Style */
+.btn {
+    background-color: #efe6e8;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover { background-color: #181716; }
+.btn:active { transform: scale(0.95); }
+
+.btn.secondary {
+    background-color: #d9dde3;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+}
+.btn.secondary:hover { background-color: #060606; }
+
+/* Winner Screen Box */
+.winner-box {
+    background: #141414;
+    padding: 40px;
+    border-radius: 15px;
+    border: 3px solid #efe7e8;
+    box-shadow: 0 0 20px rgba(25, 24, 24, 0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
