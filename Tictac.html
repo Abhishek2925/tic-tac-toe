@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SCREEN 1: START OPTION PAGE -->
+    <div id="start-screen" class="screen">
+        <h1>Tic-Tac-Toe</h1>
+        <div class="mode-selection">
+            <h3>Select Players</h3>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="gameMode" value="1player" checked> 1 Player (Pass & Play)
+                </label>
+                <label>
+                    <input type="radio" name="gameMode" value="2player"> 2 Players (Side-by-Side)
+                </label>
+            </div>
+        </div>
+        <button id="start-btn" class="btn">Start Game</button>
+    </div>
+
+    <!-- SCREEN 2: THE GAME BOARD -->
+    <div id="game-screen" class="screen hidden">
+        <h2 id="game-title">Tic-Tac-Toe</h2>
+        <div id="status">Player X's turn</div>
+        
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <button id="abort-btn" class="btn secondary">Back to Menu</button>
+    </div>
+
+    <!-- SCREEN 3: WINNER PAGE -->
+    <div id="winner-screen" class="screen hidden">
+        <div class="winner-box">
+            <h1 id="winner-message">Player X Wins! 🎉</h1>
+            <button id="play-again-btn" class="btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
